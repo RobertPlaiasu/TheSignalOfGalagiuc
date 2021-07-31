@@ -30,6 +30,8 @@ public class Movement : MonoBehaviour
         ) Flip();
 
         animator.SetBool("isMoving", CheckIsMoving());
+        
+        ClientSend.PlayerMovement();
     }
 
     void Flip()

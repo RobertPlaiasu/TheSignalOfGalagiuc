@@ -5,7 +5,9 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-    private int metalCollected = 0;
+    public int id;
+    public string username;
+    public int metalCollected = 0;
     public TextMeshProUGUI metalInfoText;
 
     public void CollectMetal()
