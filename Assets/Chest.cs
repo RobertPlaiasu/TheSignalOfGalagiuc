@@ -5,9 +5,14 @@ using TMPro;
 
 public class Chest : MonoBehaviour
 {
-    public TextMeshProUGUI tip;
+    private GameObject tip;
     private bool chestMayBeOpen = false;
 
+    void Start()
+    {
+        tip = GameObject.Find("TIP");
+    }
+    
     void Update()
     {
         if (Input.GetKey(KeyCode.E) && chestMayBeOpen)
@@ -34,7 +39,7 @@ public class Chest : MonoBehaviour
 
     private void ChestMayBeOpen(bool val)
     {
-        // tip.gameObject.SetActive(val);
+        tip.transform.GetChild(0).gameObject.SetActive(val);
         chestMayBeOpen = val;
     }
     
