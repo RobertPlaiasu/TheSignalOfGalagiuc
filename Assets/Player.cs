@@ -15,6 +15,11 @@ public class Player : MonoBehaviour
         CheckIfWon();
     }
 
+    public int CollectedMetal()
+    {
+        return metalCollected;
+    }
+
     private void incrementCollectedMetal()
     {
         metalCollected += 1;
